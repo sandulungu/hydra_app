@@ -33,7 +33,6 @@ $autoloader = require_once
 $app = \Hydra\App::getInstance($autoloader, array('debug' => true));
 
 // You may register routes here or create Controller class(es).
-// $app->route__get($pattern, function($param, ...) { ... } );
-// $app->route__post($pattern, function($param, ...) { ... } );
+// $app->route('GET', $pattern, function($param, ...) { ... });
 
 $app->run();

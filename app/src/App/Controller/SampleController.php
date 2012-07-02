@@ -25,7 +25,7 @@ class SampleController {
     }
     
     /**
-     * @route GET / html {"defaults":{"id":4}}
+     * @route GET /simple/url html {"defaults":{"id":4}}
      * @route GET somepath/$id:int/$le_param
      */
     function twoWordsAction($id, $le_param = 'default') {
