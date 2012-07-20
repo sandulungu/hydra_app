@@ -12,10 +12,7 @@
  * @license     http://www.opensource.org/licenses/MIT MIT
  */
 
-// Enable error reporting. 
-// You may leave this on even in production, as Hydra uses its own error handlers.
 error_reporting(E_ALL);
-ini_set('display_errors', true);
 
 // Download latest Hydra distro.
 if (!file_exists('../hydra/hydra.phar')) {
@@ -32,7 +29,7 @@ $autoloader = require_once
 // Optionally, provide an array of core configuration options.
 $app = \Hydra\App::getInstance($autoloader, array('debug' => true));
 
-// You may register routes here or create Controller class(es).
+// You may define your app code here.
 // $app->route('GET', $pattern, function($param, ...) { ... });
 
 $app->run();
