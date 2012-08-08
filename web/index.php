@@ -14,16 +14,15 @@
 
 error_reporting(E_ALL);
 
-// Download latest Hydra distro.
-if (!file_exists('../hydra/hydra.phar')) {
-    is_dir('../hydra') || mkdir('../hydra');
-    file_put_contents('../hydra/hydra.phar', file_get_contents('https://github.com/z7/hydra/raw/master/hydra.phar'));
-}
-
 // Register autoloader.
-$autoloader = require_once 
-    file_exists('../hydra/vendor/autoload.php') ? '../hydra/vendor/autoload.php' : 
-    '../hydra/hydra.phar';
+if (file_exists('../vendor/autoload.php')) {
+    // Either use composer (the recommended way when using 3rd party plugins).
+    $autoloader = require_once '../vendor/autoload.php';
+} else{
+    // Or download the latest Hydra distro.
+    file_exists('../hydra.phar') || file_put_contents('../hydra.phar', file_get_contents('https://github.com/z7/hydra/raw/master/hydra.phar'));
+    $autoloader = require_once '../hydra.phar';
+}
 
 // Initialize your application. 
 // Optionally, provide an array of core configuration options.

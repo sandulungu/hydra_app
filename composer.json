@@ -1,0 +1,17 @@
+{
+    "name": "hydra/app",
+    "type": "library",
+    "description": "An application template for Hydra, the cozy RESTfull PHP5.3 micro-framework.",
+    "homepage": "http://z7.github.com/hydra",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sandu Lungu",
+            "email": "sandu@lungu.info"
+        }
+    ],
+    "require": {
+        "hydra/hydra": "@dev",
+        "hydra/doctrine-dbal": "@dev"
+    }
+}

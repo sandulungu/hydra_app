@@ -1,5 +1,5 @@
-Application source files
-========================
+Hydra application skeleton
+==========================
 
 This is an application for Hydra, the cozy RESTfull PHP5.3 micro-framework. See https://github.com/z7/hydra
 
